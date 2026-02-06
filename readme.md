@@ -2,6 +2,7 @@
 # M4 — Pokédex 
 
 
+
 ## Descripción
   Pokédex proyecto estudiantil para poner en practica los contenidos del modulo 4 en relación al consumo de las API Rest atraves de fetch y asyn/await. este proyecto contiene los primeros 9 pokémones de la lista y 3 adicionales del tipo psiquico.
 
@@ -10,18 +11,11 @@
 - CSS3. 
 - Bootstrap 5.
 - JavaScript ES6+. 
-- ![PokeAPI](https://pokeapi.co/).
+- [PokeAPI](https://pokeapi.co/).
 
-## Estructura edl Proyecto
-M4-pokedex-api/
-│
-├─ assets/
-│   ├─ img/      # Imágenes del proyecto (pikachu, charizard, etc.)
-│   ├─ css/      # Estilos CSS (styles.css)
-│   └─ js/       # Lógica JavaScript (app.js)
-│
-├─ index.html    # Página principal
-└─ README.md     # Documentación del proyecto
+## Estructura del Proyecto
+![estructura](http://github.com/AlvarezF7/ assets/img/esquema proyecto.png).
+
 
 ## Funcionalidades
 
@@ -32,7 +26,7 @@ M4-pokedex-api/
 - Hacer clic en la Pokébola de la card para abrir el modal con detalles.
 - Diseño responsive, adaptable a pantallas pequeñas.
 
-# Manejo de errores![alt text](image.png)
+# Manejo de errores
  El proyecto implementa manejo de errores básico enfocado en la experiencia del usuario:
 
 - Uso de try / catch en la carga inicial de datos para detectar fallos en la PokeAPI.
@@ -42,14 +36,16 @@ M4-pokedex-api/
 - El modal utiliza datos previamente cargados, por lo que no se implementó manejo de errores  adicional en esta sección.
 
 ## Capturas
-- 
+- Vista de la aplicaión desde un computador[ ] (  ).
 
+- [Vista de la aplicacion desde un Idpad] (   ).
+- [Vista de la aplicación desde un Iphone] (  ).
  
 
 # Ver Proyecto
--![Link al Proyecto]( ).
+-[Link al Proyecto]( ).
 
 ## Créditos
-- Datos e imágenes obtenidos desde la PokeAPI 
-- Proyecto educativo Sence – Módulo 4
+- Datos e imágenes obtenidos desde la PokeAPI(https://pokeapi.co/) 
+- Proyecto educativo Sence – Módulo 4.
  
