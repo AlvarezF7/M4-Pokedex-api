@@ -38,9 +38,11 @@
 ## Capturas
 - Vista de la aplicación desde un computador![vista pc](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura1.png)
 
-- Vista de la aplicación desde un Ipad![vista ipad](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura2.png)
+- Vista de la aplicación desde un Ipad.
+- ![vista ipad](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura2.png)
 
-- Vista de la aplicación desde un Iphone![vista Iphone](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura3.png  )
+- Vista de la aplicación desde un Iphone.
+- ![vista Iphone](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura3.png  )
  
 
 # Ver Proyecto
