@@ -1,6 +1,5 @@
 
 const base = "https://pokeapi.co/api/v2/pokemon/";
-//const ids = Array.from({length: 9}, (_, i) => i + 1); // 1..9 + pokemon psiquicos
 const primeros = Array.from({length: 9},(_,i)=> i+1);
 const especiales =[150,151,249]; //  incorpora  pokemones psiquicos
 
@@ -29,37 +28,41 @@ async function cargarPokedex() {
 let coloresTipos = {fire: "#EE8130",water: "#6390F0", grass: "#7AC74C",poison: "#A33EA1",
   flying: "#A98FF3",psychic: "#F95587", bug: "#A6B91A", rock: "#B6A136",};
 
+function crearCard(p) {
+  const nombre = p.name;
+  const id =`#${String(p.id).padStart(3, "0")}`;
+  const sprite = p.sprites?.other?.["official-artwork"]?.front_default ||p.sprites?.front_default;
 
-function renderCards(lista) {
-  const grid = document.querySelector(".cards");
-  grid.innerHTML = "";
-  for (const p of lista) {
-    const nombre = p.name;
-    const id = `#${String(p.id).padStart(3, "0")}`;
-    const sprite = p.sprites?.other?.["official-artwork"]?.front_default || p.sprites?.front_default;
-    const tipos = p.types.map(t => t.type.name);
-
-    grid.insertAdjacentHTML("beforeend", `
-      <div  class="col-12 col-sm-6 col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="${sprite}" class="card-img-top p-4" alt="${nombre}">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <h5 class="card-title text-capitalize mb-0">${nombre}</h5>
-              <span class="text-muted">${id}</span>
-            </div>
-            <div>
-              ${tipos.map(t => `<span class="badge text-uppercase me-2" 
-                style="background-color:${coloresTipos[t]}; color:white">${t}</span>`).join("")}
-            </div>
-            <div class="d-flex justify-content-center mt-3">
-                 <button class="pokeBtn" type="button" data-id="${p.id}"></button>
-            </div>
+  const tipos = p.types.map(t => t.type.name);
+  return `
+    <div class="col-12 col-sm-6 col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="${sprite}" class="card-img-top p-4" alt="${nombre}">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="card-title text-capitalize mb-0">${nombre}</h5>
+            <span class="text-muted">${id}</span>
+          </div>
+          <div>
+            ${tipos.map(t => `
+              <span class="badge text-uppercase me-2"
+                style="background-color:${coloresTipos[t]}; color:white">
+                ${t}
+              </span>
+            `).join("")}
+          </div>
+          <div class="d-flex justify-content-center mt-3">
+            <button class="pokeBtn" type="button" data-id="${p.id}"></button>
           </div>
         </div>
       </div>
-    `);
+    </div>
+  `;
   }
+
+function renderCards(lista){
+    const grid = document.querySelector(".cards");
+    grid.innerHTML = lista.map(crearCard).join("");
 }
 
 //agrega evento escucha al btn
@@ -76,7 +79,7 @@ async function modal(p) {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${p.id}/`);
   const species = await res.json();
 
-  // Buscamos la descripción en español
+  // Busca descripción en español
   const flavorEntry = species.flavor_text_entries.find(f => f.language.name === "es");
   const flavor = flavorEntry ? flavorEntry.flavor_text.replace(/\n|\f/g, " ") : "Sin descripción en español";
   const tipos = p.types.map(t => t.type.name); 
@@ -99,8 +102,7 @@ async function modal(p) {
           <p><strong>Descripción:</strong> ${flavor}</p>
        </div>
     </div>
-       `;
-   
+       `; 
   const modal = new bootstrap.Modal(document.getElementById('pokeModal'));
   modal.show();
 }
@@ -113,17 +115,33 @@ function mostrarError(msg){
 
 document.addEventListener("DOMContentLoaded", cargarPokedex);
 
-// funcion buscar
-function buscarPokemon(nombre){
-  const texto = nombre.trim();
-  return data.filter(pokemon => pokemon.name === texto);
+// función buscar
+function buscarPokemon(texto){
+  const buscar = texto.trim().toLowerCase();
+  if (!buscar) return []; // devuelve array vacío si no hay texto
 
+  return data.filter(pokemon => pokemon.name.toLowerCase().includes(buscar));
 }
 
-document.getElementById(`pokeFind`).addEventListener("input", (e) => {
+document.getElementById("pokeFind").addEventListener("input", (e) => {
   const nombre = e.target.value;
-  if (!nombre) return;
+  const pokemones = buscarPokemon(nombre);
+  const alertBox = document.getElementById("alert");
 
-  const pkm = buscarPokemon(nombre);
-  if (pkm) modal(pkm); /*abre el modal con los detalles*/
+  if (pokemones.length === 0) {
+    renderCards([]); // limpia la grilla
+
+    if (nombre.trim() !== "") { 
+      alertBox.innerHTML = `
+        <img src="./assets/img/chari_sad.png" alt="emoji">
+        <p>Pokémon no encontrado</p>
+      `;
+      alertBox.hidden = false;
+    } else {
+      alertBox.hidden = true; // input vacío, no mostrar alerta
+    }
+  } else {
+    renderCards(pokemones); 
+    alertBox.hidden = true; // oculta la alerta si hay resultados
+  }
 });

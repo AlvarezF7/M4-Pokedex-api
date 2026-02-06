@@ -17,6 +17,9 @@
  background-color: #350c50f5;
  
 }
+.form-control w-auto:hover{
+ box-shadow:  0 4px 15px rgb(116, 241, 32);
+}
 .cards{ /*este contiene todas las cards*/
  width: auto;
  padding: 0.5rem;
@@ -34,7 +37,6 @@
 }
 .card , .modal-content{ 
   transition: all 0.3s ease;
-  /*background: linear-gradient(135deg,#ffffff ,#d5bcfce0,#dccfff, #c5b8e7,#ffffff, #000000);*/
   background: linear-gradient(135deg,#b3c8da,#eef7ff ,#c1dff1d0,#f5fcff, #93e5fdb2,#f0f9ff, #033a5a);
 }
 .card{
@@ -95,7 +97,7 @@
 
 .pokeBtn:hover {
   transform: scale(1.5);
-    box-shadow: 0 4px 15px rgb(116, 241, 32);
+  box-shadow: 0 4px 15px rgb(116, 241, 32);
 }
 /*Modal*/
 #imgModal{
@@ -113,7 +115,7 @@
   color: rgba(58, 8, 105, 0.952);
 }
 .modal-content{
-  box-shadow: 0 4px 15px rgb(116,241,32);
+  box-shadow: 0  6px 26px rgb(116,241,32);
 }
 
 .modalName{
@@ -152,8 +154,33 @@
 
 }
 
+.alert{
+  height: auto;
+  width:90%;
+  background: linear-gradient(135deg,#bdfcf6cb,#eef7ff ,#7cc4ced0);
+  color:rgb(4, 20, 102);
+  font-size: larger;
+  font-weight:bold;
+  border: 1px solid rgba(234, 230, 247, 0.644) ;
+}
+.alert >img{
+height: 200px;
+}
 footer{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
   text-align: center;
   font-style: italic;
   color:rgba(226, 208, 255, 0.952) ;
+ 
+}
+footer > img{
+  height:80px;
+  width: auto;
+}
+footer >p {
+  margin-top: 30px;
 }
