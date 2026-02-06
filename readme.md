@@ -1,6 +1,6 @@
 
 # M4 — Pokédex 
-
+![imagen](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/image.png)
 
 
 ## Descripción
@@ -14,7 +14,7 @@
 - [PokeAPI](https://pokeapi.co/).
 
 ## Estructura del Proyecto
-[assets/img/esquema proyecto.png](https://github.com/AlvarezF7/M4-Pokedex-api/blob/0c9c4a911e7b074bd1a3822a47a0e6f72b044ccf/assets/img/esquema%20proyecto.png).
+![Estructura](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/esquema%20proyecto.png).
 
 
 ## Funcionalidades
@@ -36,10 +36,11 @@
 - El modal utiliza datos previamente cargados, por lo que no se implementó manejo de errores  adicional en esta sección.
 
 ## Capturas
-![Vista de la aplicaión desde un computador] ().
+- Vista de la aplicaión desde un computador![vista pc](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura1.png)
 
-![Vista de la aplicacion desde un Idpad] (   ).
-![Vista de la aplicación desde un Iphone] (  ).
+- Vista de la aplicacion desde un Ipad![vista ipad](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura2.png)
+
+- Vista de la aplicación desde un Iphone![vista Iphone](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura3.png  )
  
 
 # Ver Proyecto
