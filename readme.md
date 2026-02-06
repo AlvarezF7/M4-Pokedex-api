@@ -36,14 +36,14 @@
 - El modal utiliza datos previamente cargados, por lo que no se implementó manejo de errores  adicional en esta sección.
 
 ## Capturas
-- Vista de la aplicaión desde un computador[ ] (  ).
+![Vista de la aplicaión desde un computador] ().
 
-- [Vista de la aplicacion desde un Idpad] (   ).
-- [Vista de la aplicación desde un Iphone] (  ).
+![Vista de la aplicacion desde un Idpad] (   ).
+![Vista de la aplicación desde un Iphone] (  ).
  
 
 # Ver Proyecto
--[Link al Proyecto]( ).
+-[Link al Proyecto](https://alvarezf7.github.io/M4-Pokedex-api/ ).
 
 ## Créditos
 - Datos e imágenes obtenidos desde la PokeAPI(https://pokeapi.co/) 
