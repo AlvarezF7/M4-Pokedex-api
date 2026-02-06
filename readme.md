@@ -14,7 +14,7 @@
 - [PokeAPI](https://pokeapi.co/).
 
 ## Estructura del Proyecto
-![estructura](http://github.com/AlvarezF7/ assets/img/esquema proyecto.png).
+[assets/img/esquema proyecto.png](https://github.com/AlvarezF7/M4-Pokedex-api/blob/0c9c4a911e7b074bd1a3822a47a0e6f72b044ccf/assets/img/esquema%20proyecto.png).
 
 
 ## Funcionalidades
