@@ -36,17 +36,17 @@
 - El modal utiliza datos previamente cargados, por lo que no se implementó manejo de errores  adicional en esta sección.
 
 ## Capturas
-- Vista de la aplicaión desde un computador![vista pc](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura1.png)
+- Vista de la aplicación desde un computador![vista pc](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura1.png)
 
-- Vista de la aplicacion desde un Ipad![vista ipad](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura2.png)
+- Vista de la aplicación desde un Ipad![vista ipad](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura2.png)
 
 - Vista de la aplicación desde un Iphone![vista Iphone](https://github.com/AlvarezF7/M4-Pokedex-api/blob/main/assets/img/captura3.png  )
  
 
 # Ver Proyecto
--[Link al Proyecto](https://alvarezf7.github.io/M4-Pokedex-api/ ).
+- [Link al Proyecto](https://alvarezf7.github.io/M4-Pokedex-api/ ).
 
 ## Créditos
 - Datos e imágenes obtenidos desde la PokeAPI(https://pokeapi.co/) 
-- Proyecto educativo Sence – Módulo 4.
+- Proyecto educativo Sence – Módulo 4 por Fernanda Alvarez F.
  
